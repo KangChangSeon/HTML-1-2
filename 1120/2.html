@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loadSite(select)
+        {
+            let index = select.selectedIndex;
+            let site = select.options[index].value;
+            window.open(site, "myWin", "left=300,top=300,width=400,height=300");
+            let restext = document.getElementById("restext");
+            restext.value = site;
+        }
+        
+    </script>
+</head>
+<body>
+    <select onchange="loadSite(this)">
+        <option value="http://www.naver.com">네이버</option>
+        <option value="http://www.google.com">google</option>
+        <option value="http://www.kit.ac.kr">KIT</option>
+    </select>
+    <input type="text" id="restext" value="">
+    <p><button onclick="load()">웹사이트 접속</button></p>
+</body>
+</html>

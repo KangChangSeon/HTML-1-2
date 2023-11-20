@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="Mycanvas" width="550" height="500" style="background-color: lightblue;"></canvas>
+    <script>
+        let canvas = document.getElementById("Mycanvas");
+        let context = canvas.getContext("2d");
+
+        context.strokeStyle = "blue";
+
+        for (let i =0; i<4; i++)
+        {
+            context.font = (10+i*10) + "px forte";
+            context.strokeText(" 안녕하세요 ",10,30+i*50);
+        }
+
+        context.font = "italic 50px forte";
+        context.strokeStyle = "magenta";
+        context.lineWidth = 3;
+        context.textAlign = "left";
+        context.strokeText("javascript !!",50,250);
+        
+        context.fillStyle = "green";
+        context.textAlign = "right";
+        context.fillText("javascript!!!!!",500,300);
+    </script>
+</body>
+</html>

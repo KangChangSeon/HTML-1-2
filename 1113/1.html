@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function whatkeydown1(e)
+        {
+            let str1 = "";
+            let div1 = document.getElementById("div1");
+            div1.innerHTML = "";
+            str1 += "e.key= "+e.key+"<br>";
+            str1 += "e.code ="+e.code+"<br>";
+            div1.innerHTML = str1; 
+        }
+    </script>
+</head>
+<body>
+    텍스트 창에 키 입력<br>
+    <input type="text" id="text1" onkeydown="whatkeydown1(event)">
+    <div id="div1" style="background-color: skyblue; width: 250px; height: 50px;"></div>
+</body>
+</html>

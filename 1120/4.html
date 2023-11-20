@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="Mycanvas" width="500" height="500" style="background-color: lightblue;"></canvas>
+    <canvas id="Mycanvas1" width="500" height="500" style="background-color: lightblue;"></canvas>
+    <canvas id="Mycanvas2" width="500" height="500" style="background-color: lightblue;"></canvas>
+    <script>
+        let canvas = document.getElementById("Mycanvas");
+        let context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.moveTo(120,20);
+        context.lineTo(20,50);
+        context.lineTo(150,120);
+        context.lineTo(120,20)
+        context.strokeStyle = "magenta";
+        context.stroke();
+        
+        let canvas1 = document.getElementById("Mycanvas1");
+        let context1 = canvas1.getContext("2d");
+
+        context1.beginPath();
+        context1.rect(20,150,100,100);
+        context1.fillStyle = "violet";
+        context1.fill();
+        context1.strokeStyle = "gray";
+        context1.lineWidth = 10;
+        context1.stroke();
+
+        let canvas2 = document.getElementById("Mycanvas2");
+        let context2 = canvas2.getContext("2d");
+
+        context2.beginPath();
+        context2.moveTo(80,340);
+        context2.arc(80,340,50,0,1.5*Math.PI);
+        context2.closePath();
+        context2.fillStyle = "yellowgreen";
+        context2.fill();
+        context2.strokeStyle = "pink";
+        context2.lineWidth = 20;
+        context2.stroke();
+    </script>
+</body>
+</html>
