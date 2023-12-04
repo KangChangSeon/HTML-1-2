@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mycanvas" style="background-color: aliceblue;", width="300", height="250"></canvas>
+    <script>
+        let canvas = document.getElementById("mycanvas");
+        let context = canvas.getContext("2d");
+        let img = new Image();
+        img.onload = function()
+        { 
+            context.drawImage(img, 20, 20, 100, 200); 
+            // context.drawImage(img, 0, 0, canvas.width, canvas.height) 그림 전체를 설정하고 싶을 때
+        }
+        img.src = "beach.png";
+    </script>
+</body>
+</html>
